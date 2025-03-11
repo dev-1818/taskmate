@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title> Welcome To Taskmate! </title> 
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ index_text }}</h1>
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/images14.jpg' %}" alt="Notes"  class="rounded-lg shadow" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/image12.jpg' %}" alt="Notes" class="rounded-lg shadow" width="360" height="250">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/image13.jpg' %}" alt="Notes"  class="rounded-lg shadow" width="360" height="250">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+              <center><p class="h1"> If we want users to like our software,</p></center>
+              <center><p class="h2"> we should design it to behave </p></center>
+              <center><p class="h4"> like a likable person. </p></center>
+                
+              <center><a href="{% url 'todolist' %}"<button type="button" class="btn btn-secondary btn-lg shadow">Let's Get Started!!</button></a></center>
+            </div>
+         </div>
+    </div>
+{% endblock content %}
